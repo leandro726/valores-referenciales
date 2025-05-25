@@ -10,3 +10,4 @@ if ($con->connect_error) {
 } else {
     // echo "Conexión exitosa a la base de datos.";
 }   
+?>
