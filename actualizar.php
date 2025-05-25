@@ -21,4 +21,4 @@ $con->query("UPDATE mediciones SET
     ram='$ram' 
     WHERE id=$id");
 
-    header("Location: listar.php");
+    header("Location: listar_intel.php");

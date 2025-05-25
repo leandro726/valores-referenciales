@@ -19,7 +19,7 @@ $stmt->bind_param(
 );
 
 if ($stmt->execute()) {
-    echo "Datos guardados correctamente.<br><a href='index.php'>Volver</a>";
+    echo "Datos guardados correctamente.<br><a href='registrar_intel.php'>Volver</a>";
 } else {
     echo "Error: " . $stmt->error;
 }

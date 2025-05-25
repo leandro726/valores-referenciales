@@ -5,7 +5,7 @@ if (!isset($_SESSION['usuario'])) {
     exit;
 }
 
-
+include 'header.php';
 include 'db.php';
 
 $resultado = $con->query("SELECT * FROM mediciones");
@@ -33,7 +33,9 @@ $resultado = $con->query("SELECT * FROM mediciones");
                 <th class="border border-gray-300 px-4 py-2">VCCGT</th>
                 <th class="border border-gray-300 px-4 py-2">PCH</th>
                 <th class="border border-gray-300 px-4 py-2">RAM</th>
+                 <?php if ($_SESSION['usuario']['rol'] === 'admin'): ?>
                 <th class="px-4 py-2">Acciones</th>
+                <?php endif; ?>
             </tr>
         </thead>
         <tbody>
@@ -57,7 +59,7 @@ $resultado = $con->query("SELECT * FROM mediciones");
         </tbody>
     </table>
     <div class="text-center mt-4">
-        <a href="index.php" class="bg-blue-500 text-white px-4 py-2 rounded">Volver</a>
+        <a href="registrar_intel.php" class="bg-blue-500 text-white px-4 py-2 rounded">Volver</a>
 </body>
 </html>
 <?php

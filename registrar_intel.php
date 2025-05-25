@@ -5,7 +5,7 @@ if (!isset($_SESSION['usuario'])) {
     exit;
 }
 
-
+include 'header.php';
 include 'db.php';
 ?>
 
@@ -20,8 +20,8 @@ include 'db.php';
 </head>
  <body class="bg-gray-100 font-sans p-6">
     <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow">
-        <h2 class="text-2xl font-bold mb-6 text-center">Registrar valores de referencia</h2>
-        <form action="guardar.php" method="POST" class="space-y-4">
+        <h2 class="text-2xl font-bold mb-6 text-center">Registrar valores INTEL</h2>
+        <form action="guardar_intel.php" method="POST" class="space-y-4">
             <div>
                 <label class="block mb-1 font-semibold">Modelo de Placa:</label>
                 <input type="text" name="placa_modelo" required class="w-full border p-2 rounded">
@@ -66,9 +66,13 @@ include 'db.php';
         </form>
 
         <div class="text-center mt-6">
-            <a href="listar.php" class="text-blue-600 hover:underline">Ver registros</a>
+            <a href="listar_intel.php" class="text-blue-600 hover:underline">Ver registros</a>
         </div>
+
     </div>
+            <a href="logout.php" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 mt-4 block text-center w-32 mx-auto">
+  Cerrar sesión
+</a>
 </body>
 
 </html>

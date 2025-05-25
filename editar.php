@@ -4,7 +4,7 @@ if (!isset($_SESSION['usuario'])) {
     header("Location: login.php");
     exit;
 }
-
+include 'header.php';
 include 'db.php';
 $id = $_GET['id'];
 $resultado = $con->query("SELECT * FROM mediciones WHERE id = $id");
