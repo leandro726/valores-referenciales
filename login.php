@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             'nombre' => $usuario['nombre'],
             'rol' => $usuario['rol']
         ];
-        header("Location: listar.php");
+        header("Location: listar_intel.php");
         exit;
     } else {
         $error = "Email o contraseña incorrectos.";

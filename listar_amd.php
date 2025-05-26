@@ -1,12 +1,12 @@
 <?php 
-include 'header.php';
-include 'db.php';
 session_start();
-
 if (!isset($_SESSION['usuario'])) {
     header("Location: login.php");
-    exit();
+    exit;
 }
+include 'header.php';
+include 'db.php';
+
 $resultado = $con->query("SELECT * FROM mediciones_amd");
 ?>
 
